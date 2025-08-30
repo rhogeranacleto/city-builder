@@ -5,12 +5,20 @@ var total := 0 :
 		total = value
 		
 		storage_name.text = "Storage " + type +  " " + str(total) + " / " + str(limit)
+		
+		#value_changed.emit(total)
+		inventory.wood = value
+
 		pass
 
 var limit := 100
 
 @export var type : String
+@export var inventory : Inventory
+
 @onready var storage_name: Label = $StorageName
+
+#signal value_changed(int)
 
 
 # Called when the node enters the scene tree for the first time.

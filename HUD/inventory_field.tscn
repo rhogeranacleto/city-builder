@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwdlytvipumyu"]
+
+[ext_resource type="Script" path="res://HUD/inventory_field.gd" id="1_68688"]
+
+[node name="InventoryField" type="BoxContainer"]
+offset_right = 112.0
+offset_bottom = 23.0
+size_flags_horizontal = 0
+script = ExtResource("1_68688")
+
+[node name="NameColumn" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="NameColumn"]
+layout_mode = 2
+text = "Name"
+
+[node name="ValueColumn" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="ValueColumn"]
+layout_mode = 2
+text = "0"
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
