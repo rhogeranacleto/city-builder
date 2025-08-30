@@ -13,9 +13,9 @@ position = Vector2(752, 335)
 scale = Vector2(3.18902, 1.81141)
 texture = ExtResource("1_0xm2m")
 
-[node name="Person" parent="." node_paths=PackedStringArray("workPlace") instance=ExtResource("3_h2yge")]
+[node name="Person" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("3_h2yge")]
 position = Vector2(257, 144)
-workPlace = NodePath("../Storage")
+work_place = NodePath("../Storage")
 
 [node name="Tree" parent="." instance=ExtResource("3_1bvp3")]
 position = Vector2(490, 213)
