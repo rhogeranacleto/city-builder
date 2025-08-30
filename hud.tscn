@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://crna13873bync"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="Wood" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Wood: 3"

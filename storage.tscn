@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdn5ednoxfyve"]
+
+[ext_resource type="Script" path="res://storage.gd" id="1_lnm35"]
+[ext_resource type="Texture2D" uid="uid://bkclh5wmmyxjo" path="res://storage-chest.png" id="1_ueev3"]
+
+[node name="Storage" type="Node2D"]
+script = ExtResource("1_lnm35")
+
+[node name="Storage-chest" type="Sprite2D" parent="."]
+scale = Vector2(0.127344, 0.127344)
+texture = ExtResource("1_ueev3")
+
+[node name="StorageName" type="Label" parent="."]
+offset_left = -72.0
+offset_top = -74.0
+offset_right = 72.0
+offset_bottom = -51.0
+text = "Storage"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
