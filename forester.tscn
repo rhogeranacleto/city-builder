@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://chomr6xdlkvph"]
+
+[ext_resource type="Texture2D" uid="uid://c8c5e6kgvcfpx" path="res://forester.png" id="1_rfope"]
+
+[node name="Forester" type="Node2D"]
+
+[node name="Forester" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_rfope")
+
+[node name="Name" type="Label" parent="."]
+offset_left = -70.0
+offset_top = -82.0
+offset_right = 72.0
+offset_bottom = -59.0

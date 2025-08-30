@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfy6ity17e3m"]
+[gd_scene load_steps=9 format=3 uid="uid://dfy6ity17e3m"]
 
 [ext_resource type="Texture2D" uid="uid://ceeyfvkm5rbom" path="res://green-natural-organic-grass-background-and-texture-vector.jpg" id="1_0xm2m"]
 [ext_resource type="Script" path="res://main.gd" id="1_7mycd"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bdxqmqnxrtwxu" path="res://person.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bdn5ednoxfyve" path="res://storage.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://crna13873bync" path="res://hud.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://forester.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://kjt5i6jk4mhp" path="res://forester_person.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7mycd")
@@ -15,7 +17,7 @@ position = Vector2(752, 335)
 scale = Vector2(3.18902, 1.81141)
 texture = ExtResource("1_0xm2m")
 
-[node name="Person" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("3_h2yge")]
+[node name="Lamber" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("3_h2yge")]
 position = Vector2(257, 144)
 work_place = NodePath("../Storage")
 
@@ -37,8 +39,9 @@ type = "Wood"
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(857, 72)
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-autostart = true
+[node name="Forester_place" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(904, 144)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Forester" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("8_5vw27")]
+position = Vector2(801, 202)
+work_place = NodePath("../Forester_place")
