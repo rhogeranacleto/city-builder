@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2e461pkrrwph"]
+
+[ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="1_b4k12"]
+[ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="2_xspqo"]
+[ext_resource type="PackedScene" uid="uid://cdnsymljxy6e3" path="res://WorkPlaces/Lumberyard/lumberyard.tscn" id="3_pbpcc"]
+
+[node name="WithState" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_b4k12")]
+
+[node name="Character" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
+position = Vector2(279, 202)
+workplace = NodePath("../Lumberyard")
+
+[node name="Lumberyard" parent="." instance=ExtResource("3_pbpcc")]
+position = Vector2(642, 234)

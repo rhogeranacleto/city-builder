@@ -1,21 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdnsymljxy6e3"]
+[gd_scene load_steps=10 format=3 uid="uid://cdnsymljxy6e3"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_eo0lj"]
-[ext_resource type="Script" uid="uid://cf74ltlelh583" path="res://WorkPlaces/shared_resource_storage.gd" id="1_fvtr3"]
+[ext_resource type="Script" uid="uid://cvq44rjdxed0d" path="res://WorkPlaces/Lumberyard/lumberyard.gd" id="1_fvtr3"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_8v6u2"]
+[ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_gtdb1"]
+[ext_resource type="Script" uid="uid://erfoyggnrvgk" path="res://StateMachine/StatesCollection.gd" id="3_w6xku"]
+[ext_resource type="Script" uid="uid://cexh7bvvfmgak" path="res://WorkPlaces/Lumberyard/Work/idle.gd" id="4_qfx2n"]
 
-[sub_resource type="Resource" id="Resource_gtdb1"]
+[sub_resource type="Resource" id="Resource_qfx2n"]
+script = ExtResource("3_w6xku")
+name = "idle"
+actionState = ExtResource("4_qfx2n")
+metadata/_custom_type_script = "uid://erfoyggnrvgk"
+
+[sub_resource type="Resource" id="Resource_w6xku"]
+script = ExtResource("2_gtdb1")
+initial = "idle"
+states = Array[ExtResource("3_w6xku")]([SubResource("Resource_qfx2n")])
+metadata/_custom_type_script = "uid://du86b8d7hjr33"
+
+[sub_resource type="Resource" id="Resource_8v6u2"]
 script = ExtResource("2_8v6u2")
-wood = 0
-rock = 0
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
-[node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("indicator")]
+[node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
 script = ExtResource("1_fvtr3")
-type = "Wood"
-limit = 100
-indicator = NodePath("AmountIndicator")
-inventory = SubResource("Resource_gtdb1")
+job_resource = SubResource("Resource_w6xku")
+inventory = SubResource("Resource_8v6u2")
+amountIndicator = NodePath("AmountIndicator")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_eo0lj")

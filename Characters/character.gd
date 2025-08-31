@@ -3,21 +3,28 @@ class_name Character
 
 @export var workplace : Workplace :
 	set(newWorkplace) :
-		workplace.unregister_worker(self)
+		if workplace:
+			workplace.unregister_worker(self)
 		
 		workplace = newWorkplace
 		
-		workplace.register_worker(self)
+		if state_machine:
+			register_to_workplace()
 
-var job : Job
-
+@onready var state_machine: StateMachine = $StateMachine
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	if workplace:
+		register_to_workplace()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func register_to_workplace():
+	if workplace.register_worker(self):
+		state_machine.statesCollection = workplace.job_resource.states
+		state_machine.start(workplace.job_resource.initial)

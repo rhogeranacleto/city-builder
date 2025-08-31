@@ -1,6 +1,13 @@
 extends Resource
 class_name Job
 
-func assign_to(character: Character, state_machine: StateMachine):
-	# Inicia a máquina de estados da profissão
+@export var initial : String
+@export var states : Array[StatesCollection]
+
+func assign_to(state_machine: StateMachine):	
+	for state in states:
+		var new_state = state.actionState.new()
+		state_machine.add_child(new_state)
+		
+	state_machine.start(initial)
 	pass

@@ -15,15 +15,16 @@ func _ready() -> void:
 	
 	pass # Replace with function body.
 
+#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func register_worker(worker: Character):
+func register_worker(worker: Character) -> bool:
 	if worker not in workers:
 		workers.append(worker)
-		worker.job = job_resource
+		return true
+	return false
 
 func unregister_worker(worker: Character):
 	workers.erase(worker)

@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @export var type : String
 @export var limit := 0
 @export var indicator := Label
