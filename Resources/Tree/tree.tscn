@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0ovuaedxs8ik"]
+
+[ext_resource type="Texture2D" uid="uid://vpqafs8mlgeh" path="res://Resources/Tree/tree.png" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://ciu6lfthgguru" path="res://Resources/Tree/tree.gd" id="1_nnvrw"]
+
+[node name="Tree" type="Node2D" groups=["tree"]]
+script = ExtResource("1_nnvrw")
+
+[node name="Tree" type="Sprite2D" parent="."]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_brfkd")
+
+[node name="IntegrityLabel" type="Label" parent="."]
+offset_left = -83.0
+offset_top = -89.0
+offset_right = 83.0
+offset_bottom = -66.0
+text = "100"
+horizontal_alignment = 1

@@ -11,7 +11,7 @@ var state: String = 'idle' :
 @onready var action: Label = $Action
 @onready var plant_timer: Timer = $PlantTimer
 
-const TREE = preload("res://tree.tscn")
+const TREE = preload("res://Resources/Tree/tree.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
