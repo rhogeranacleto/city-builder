@@ -1,12 +1,9 @@
 extends State
 class_name Lumberjack_idle
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func enter():
+	print('entrou')
+	await get_tree().create_timer(3.0).timeout
+	
+	#state_machine.change_state('look_for_tree')
 	pass

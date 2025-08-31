@@ -26,5 +26,5 @@ func _process(delta: float) -> void:
 
 func register_to_workplace():
 	if workplace.register_worker(self):
-		state_machine.statesCollection = workplace.job_resource.states
+		state_machine.updateCollection(workplace.job_resource.states_scripts)
 		state_machine.start(workplace.job_resource.initial)

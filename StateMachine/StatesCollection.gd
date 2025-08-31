@@ -2,4 +2,4 @@ extends Resource
 class_name StatesCollection
 
 @export var name: String
-@export var actionState: Script
+@export var action_state: Script
