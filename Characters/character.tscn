@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://2x6hbu1eroa8"]
+
+[ext_resource type="Texture2D" uid="uid://cw43hye0mbvh4" path="res://Characters/commoner.png" id="1_acr0g"]
+[ext_resource type="Script" uid="uid://cwaor01c2hoqy" path="res://Characters/character.gd" id="1_ticvp"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_ticvp")
+
+[node name="Commoner" type="Sprite2D" parent="."]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("1_acr0g")

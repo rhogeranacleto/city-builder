@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bros6cdq54aw6"]
+
+[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_f6mn6"]
+[ext_resource type="Script" uid="uid://dv3efvxrxuton" path="res://WorkPlaces/Storages/general_storage.gd" id="1_m55u1"]
+
+[node name="MainStorage" type="Node2D"]
+script = ExtResource("1_m55u1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6mn6")
+region_enabled = true
+region_rect = Rect2(459.705, 144.946, 71.8512, 92.1799)

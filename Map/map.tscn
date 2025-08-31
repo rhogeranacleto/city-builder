@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dstm2qic2a5tc"]
+[gd_scene load_steps=6 format=4 uid="uid://dstm2qic2a5tc"]
 
 [ext_resource type="Texture2D" uid="uid://bh7r23qh3v7y1" path="res://Map/hexagonTerrain_sheet.png" id="1_ro55w"]
+[ext_resource type="PackedScene" uid="uid://b0ovuaedxs8ik" path="res://Resources/Tree/tree.tscn" id="2_njngi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro55w"]
 texture = ExtResource("1_ro55w")
@@ -10,10 +11,15 @@ texture_region_size = Vector2i(120, 140)
 4:1/0 = 0
 1:0/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6yc6o"]
+resource_name = "environment"
+scenes/1/scene = ExtResource("2_njngi")
+
 [sub_resource type="TileSet" id="TileSet_njngi"]
 tile_shape = 3
 tile_size = Vector2i(120, 120)
 sources/0 = SubResource("TileSetAtlasSource_ro55w")
+sources/1 = SubResource("TileSetScenesCollectionSource_6yc6o")
 
 [node name="Map" type="Node2D"]
 
