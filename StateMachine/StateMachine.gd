@@ -5,6 +5,7 @@ class_name StateMachine
 
 var current_state: State
 var states := {}
+var context := {}
 
 func add_state(state_script: Script):
 	var state_name = state_script.get_global_name()
@@ -12,6 +13,7 @@ func add_state(state_script: Script):
 	
 	instance.name = state_name
 	instance.state_machine = self
+	instance.character = character
 	states[state_name] = instance
 	add_child(instance)
 

@@ -10,6 +10,14 @@ func find_tree():
 	var trees = get_tree().get_nodes_in_group('tree')
 	
 	if not trees.is_empty():
-		print(trees.get(0))
-
+		state_machine.context.set('target_tree', trees.get(0))
+		
 	pass
+
+func update(delta: float):
+	var tree_target = state_machine.context.get('target_tree') as Node
+	
+	if tree_target:
+		if character.walk_to(tree_target, delta) < 10:
+			state_machine.change_state('Lumberjack_chop')
+		pass

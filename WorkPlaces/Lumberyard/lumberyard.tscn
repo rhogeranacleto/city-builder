@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdnsymljxy6e3"]
+[gd_scene load_steps=11 format=3 uid="uid://cdnsymljxy6e3"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_eo0lj"]
 [ext_resource type="Script" uid="uid://cvq44rjdxed0d" path="res://WorkPlaces/Lumberyard/lumberyard.gd" id="1_fvtr3"]
@@ -6,21 +6,23 @@
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_gtdb1"]
 [ext_resource type="Script" uid="uid://cexh7bvvfmgak" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_idle.gd" id="4_qfx2n"]
 [ext_resource type="Script" uid="uid://sk87ruva0pye" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_look_for_tree.gd" id="4_w6xku"]
+[ext_resource type="Script" uid="uid://doxrtjg0booy8" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_chop.gd" id="5_qfx2n"]
+[ext_resource type="Script" uid="uid://bc3pgyy3rnej0" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_deliver.gd" id="6_s273p"]
 
 [sub_resource type="Resource" id="Resource_w6xku"]
 script = ExtResource("2_gtdb1")
 initial = "Lumberjack_idle"
-states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku")])
+states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku"), ExtResource("5_qfx2n"), ExtResource("6_s273p")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_8v6u2"]
+[sub_resource type="Resource" id="Resource_k3r2i"]
 script = ExtResource("2_8v6u2")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
 script = ExtResource("1_fvtr3")
 job_resource = SubResource("Resource_w6xku")
-inventory = SubResource("Resource_8v6u2")
+inventory = SubResource("Resource_k3r2i")
 amountIndicator = NodePath("AmountIndicator")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -33,4 +35,4 @@ offset_left = -20.0
 offset_top = -70.0
 offset_right = 20.0
 offset_bottom = -47.0
-text = "0 / 0"
+text = "0 / 100"

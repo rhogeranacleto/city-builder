@@ -1,6 +1,8 @@
 extends Node2D
 class_name Character
 
+var SPEED:= 200.0
+
 @export var workplace : Workplace :
 	set(newWorkplace) :
 		if workplace:
@@ -28,3 +30,8 @@ func register_to_workplace():
 	if workplace.register_worker(self):
 		state_machine.updateCollection(workplace.job_resource.states_scripts)
 		state_machine.start(workplace.job_resource.initial)
+
+func walk_to(target: Node, delta: float) -> float:
+	global_position += position.direction_to(target.global_position) * SPEED * delta
+	
+	return position.distance_to(target.global_position)
