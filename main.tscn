@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://crna13873bync" path="res://HUD/hud.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://WorkPlaces/Forester/forester.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://kjt5i6jk4mhp" path="res://forester_person.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://g7y8hskum4oh" path="res://Resources/RockMine/rock_mine.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/miner_work_place.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://g7y8hskum4oh" path="res://Resources/RockMine/rock_resource.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/general_storage.tscn" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://cdnsymljxy6e3" path="res://WorkPlaces/Lumberyard/lumberyard.tscn" id="13_ycdy4"]
 

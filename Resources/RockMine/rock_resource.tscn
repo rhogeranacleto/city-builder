@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_iqfyx"]
 
-[node name="RockMine" type="Node2D"]
+[node name="RockResource" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iqfyx")

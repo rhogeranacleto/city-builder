@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2e461pkrrwph"]
+[gd_scene load_steps=10 format=3 uid="uid://b2e461pkrrwph"]
 
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="1_b4k12"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="2_xspqo"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="4_pbpcc"]
 [ext_resource type="PackedScene" uid="uid://b0ovuaedxs8ik" path="res://Resources/Tree/tree.tscn" id="4_xspqo"]
 [ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://WorkPlaces/Forester/forester.tscn" id="6_p0o8e"]
+[ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="7_2njeq"]
+[ext_resource type="PackedScene" uid="uid://g7y8hskum4oh" path="res://Resources/RockMine/rock_resource.tscn" id="8_o4bej"]
 
 [sub_resource type="Resource" id="Resource_p0o8e"]
 script = ExtResource("4_pbpcc")
@@ -38,3 +40,14 @@ position = Vector2(915, 459)
 [node name="Character2" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
 position = Vector2(1010, 527)
 workplace = NodePath("../Forester")
+
+[node name="RockMine" parent="." node_paths=PackedStringArray("resource") instance=ExtResource("7_2njeq")]
+position = Vector2(193, 102)
+resource = NodePath("../RockResource")
+
+[node name="Character3" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
+position = Vector2(81, 156)
+workplace = NodePath("../RockMine")
+
+[node name="RockResource" parent="." instance=ExtResource("8_o4bej")]
+position = Vector2(117, 246)
