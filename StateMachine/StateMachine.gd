@@ -9,11 +9,12 @@ var context := {}
 
 func add_state(state_script: Script):
 	var state_name = state_script.get_global_name()
-	var instance = state_script.new()
+	var instance = state_script.new() as State
 	
 	instance.name = state_name
 	instance.state_machine = self
 	instance.character = character
+	instance.process_mode = ProcessMode.PROCESS_MODE_DISABLED
 	states[state_name] = instance
 	add_child(instance)
 
@@ -23,14 +24,12 @@ func start(initial_state: String):
 func change_state(new_state: String):
 	if current_state:
 		current_state.exit()
-		#remove_child(current_state)
-	current_state = states[new_state]
-	#add_child(current_state)
-	current_state.enter()
+		current_state.process_mode = ProcessMode.PROCESS_MODE_DISABLED
 
-func _process(delta):
-	if current_state:
-		current_state.update(delta)
+	current_state = states[new_state]
+
+	current_state.enter()
+	current_state.process_mode = ProcessMode.PROCESS_MODE_INHERIT
 
 func updateCollection(statesCollection : Array[Script]):
 	for child in get_children():

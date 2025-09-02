@@ -15,7 +15,7 @@ func get_point_arount_work_place():
 	
 	position =  character.workplace.global_position + Vector2(cos(angle), sin(angle)) * r
 	
-func update(delta: float):
+func _process(delta: float) -> void:
 	if character.walk_to(position, delta) < 5:
 		state_machine.change_state('Forester_plant')
 		

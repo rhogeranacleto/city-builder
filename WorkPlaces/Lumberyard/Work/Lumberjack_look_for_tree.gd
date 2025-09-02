@@ -14,7 +14,7 @@ func find_tree():
 		
 	pass
 
-func update(delta: float):
+func _process(delta: float):
 	var tree_target = state_machine.context.get('target_tree') as Node2D
 	
 	if tree_target:
