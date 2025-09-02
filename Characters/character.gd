@@ -31,7 +31,7 @@ func register_to_workplace():
 		state_machine.updateCollection(workplace.job_resource.states_scripts)
 		state_machine.start(workplace.job_resource.initial)
 
-func walk_to(target: Node, delta: float) -> float:
-	global_position += position.direction_to(target.global_position) * SPEED * delta
+func walk_to(target: Vector2, delta: float) -> float:
+	global_position += position.direction_to(target) * SPEED * delta
 	
-	return position.distance_to(target.global_position)
+	return position.distance_to(target)

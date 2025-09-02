@@ -15,9 +15,9 @@ func find_tree():
 	pass
 
 func update(delta: float):
-	var tree_target = state_machine.context.get('target_tree') as Node
+	var tree_target = state_machine.context.get('target_tree') as Node2D
 	
 	if tree_target:
-		if character.walk_to(tree_target, delta) < 10:
+		if character.walk_to(tree_target.global_position, delta) < 10:
 			state_machine.change_state('Lumberjack_chop')
 		pass

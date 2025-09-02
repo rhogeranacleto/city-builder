@@ -2,7 +2,7 @@ extends State
 class_name Lumberjack_deliver
 
 func update(delta: float):
-	if character.walk_to(character.workplace, delta) < 10:
+	if character.walk_to(character.workplace.global_position, delta) < 10:
 		character.workplace.inventory.addItem('wood', 3)
 		
 		print('otro', character.workplace.inventory.wood)
