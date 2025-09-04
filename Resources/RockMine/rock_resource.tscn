@@ -1,10 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://g7y8hskum4oh"]
+[gd_scene load_steps=4 format=3 uid="uid://g7y8hskum4oh"]
 
+[ext_resource type="Script" uid="uid://d0wh2stxj1n58" path="res://Resources/types/ExhaustibleResource.gd" id="1_8tusr"]
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_iqfyx"]
 
-[node name="RockResource" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ooqcx"]
+size = Vector2(72, 93)
+
+[node name="RockResource" type="Area2D" node_paths=PackedStringArray("amountIndicator") groups=["rock_resource"]]
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_8tusr")
+total = 15
+left = 15
+amountIndicator = NodePath("Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iqfyx")
 region_enabled = true
 region_rect = Rect2(383, 166.5, 77, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_ooqcx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -64.0
+offset_top = -78.0
+offset_right = 63.0
+offset_bottom = -55.0
+text = "100 / 100"
+horizontal_alignment = 1

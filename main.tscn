@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfy6ity17e3m"]
+[gd_scene load_steps=3 format=3 uid="uid://dfy6ity17e3m"]
 
-[ext_resource type="Script" uid="uid://dok4cw7dbx0kq" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b2e461pkrrwph" path="res://game.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://crna13873bync" path="res://HUD/hud.tscn" id="5_lquwl"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_7mycd")
 
 [node name="Hud" parent="." instance=ExtResource("5_lquwl")]
 
-[node name="WithState" parent="." instance=ExtResource("3_h2yge")]
+[node name="Game" parent="." instance=ExtResource("3_h2yge")]

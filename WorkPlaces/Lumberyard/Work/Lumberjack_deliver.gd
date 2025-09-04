@@ -3,7 +3,10 @@ class_name Lumberjack_deliver
 
 func _process(delta: float) -> void:
 	if character.walk_to(character.workplace.global_position, delta) < 10:
-		character.workplace.inventory.addItem('wood', 3)
+		var wood = character.inventory.wood
+		
+		character.workplace.inventory.addItem('wood', wood)
+		character.inventory.addItem('wood', -wood)
 		
 		print('otro', character.workplace.inventory.wood)
 		print('2', character.workplace.inventory.rock)

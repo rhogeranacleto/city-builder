@@ -1,6 +1,8 @@
 extends Node2D
 class_name Character
 
+@export var inventory : Inventory
+
 var SPEED:= 200.0
 
 @export var workplace : Workplace :

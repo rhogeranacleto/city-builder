@@ -1,26 +1,31 @@
-[gd_scene load_steps=9 format=3 uid="uid://nboxo44ig36v"]
+[gd_scene load_steps=12 format=3 uid="uid://nboxo44ig36v"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_3onty"]
 [ext_resource type="Script" uid="uid://bg80qlne54rbl" path="res://WorkPlaces/RockMine/rock_mine.gd" id="1_agmt7"]
-[ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_8xpy1"]
-[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_60pha"]
-[ext_resource type="Script" uid="uid://oamay0uvulel" path="res://WorkPlaces/RockMine/Work/RockMiner_idle.gd" id="3_eilyf"]
-[ext_resource type="Script" uid="uid://dqc5aaobwxw3g" path="res://WorkPlaces/RockMine/Work/RockMiner_go_to_resource.gd" id="4_ygai5"]
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_s6f57"]
+[ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_ygai5"]
+[ext_resource type="Script" uid="uid://dqc5aaobwxw3g" path="res://WorkPlaces/RockMine/Work/RockMiner_go_to_resource.gd" id="3_8lc3g"]
+[ext_resource type="Script" uid="uid://oamay0uvulel" path="res://WorkPlaces/RockMine/Work/RockMiner_idle.gd" id="4_aisa8"]
+[ext_resource type="Script" uid="uid://but272ngr8k8v" path="res://WorkPlaces/RockMine/Work/RockMiner_extract.gd" id="5_aisa8"]
+[ext_resource type="Script" uid="uid://fldhprl553ao" path="res://WorkPlaces/RockMine/Work/RockMiner_deliver.gd" id="6_kcy3q"]
 
-[sub_resource type="Resource" id="Resource_ygai5"]
-script = ExtResource("2_8xpy1")
+[sub_resource type="Resource" id="Resource_kcy3q"]
+script = ExtResource("2_ygai5")
 initial = "RockMiner_idle"
-states_scripts = Array[Script]([ExtResource("4_ygai5"), ExtResource("3_eilyf")])
+states_scripts = Array[Script]([ExtResource("3_8lc3g"), ExtResource("4_aisa8"), ExtResource("5_aisa8"), ExtResource("6_kcy3q")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_eilyf"]
-script = ExtResource("2_60pha")
+[sub_resource type="Resource" id="Resource_2a0l5"]
+script = ExtResource("2_s6f57")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ygai5"]
+radius = 100.0
 
 [node name="RockMine" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
 script = ExtResource("1_agmt7")
-job_resource = SubResource("Resource_ygai5")
-inventory = SubResource("Resource_eilyf")
+job_resource = SubResource("Resource_kcy3q")
+inventory = SubResource("Resource_2a0l5")
 amountIndicator = NodePath("AmountIndicator")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -34,3 +39,12 @@ offset_top = -66.0
 offset_right = 22.0
 offset_bottom = -43.0
 text = "0 / 100"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ygai5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

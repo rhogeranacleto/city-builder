@@ -28,6 +28,10 @@ tap={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="rock_resources"
+
 [rendering]
 
 renderer/rendering_method="mobile"
