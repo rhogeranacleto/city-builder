@@ -1,14 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0ovuaedxs8ik"]
 
-[ext_resource type="Texture2D" uid="uid://vpqafs8mlgeh" path="res://Resources/Tree/tree.png" id="1_brfkd"]
 [ext_resource type="Script" uid="uid://ciu6lfthgguru" path="res://Resources/Tree/tree.gd" id="1_nnvrw"]
+[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="2_8t71o"]
 
 [node name="Tree" type="Node2D" groups=["tree"]]
 script = ExtResource("1_nnvrw")
 
 [node name="Tree" type="Sprite2D" parent="."]
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("1_brfkd")
+scale = Vector2(1.81, 1.81)
+texture = ExtResource("2_8t71o")
+region_enabled = true
+region_rect = Rect2(968.22784, 342.6974, 21.169373, 44.077087)
 
 [node name="IntegrityLabel" type="Label" parent="."]
 offset_left = -83.0

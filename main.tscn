@@ -1,67 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://dfy6ity17e3m"]
+[gd_scene load_steps=4 format=3 uid="uid://dfy6ity17e3m"]
 
-[ext_resource type="Texture2D" uid="uid://ceeyfvkm5rbom" path="res://green-natural-organic-grass-background-and-texture-vector.jpg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dok4cw7dbx0kq" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="2_kek77"]
-[ext_resource type="PackedScene" uid="uid://b0ovuaedxs8ik" path="res://Resources/Tree/tree.tscn" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bdxqmqnxrtwxu" path="res://person.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bdn5ednoxfyve" path="res://storage.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b2e461pkrrwph" path="res://game.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://crna13873bync" path="res://HUD/hud.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://WorkPlaces/Forester/forester.tscn" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://kjt5i6jk4mhp" path="res://forester_person.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://g7y8hskum4oh" path="res://Resources/RockMine/rock_resource.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="11_efxa6"]
-[ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/general_storage.tscn" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://cdnsymljxy6e3" path="res://WorkPlaces/Lumberyard/lumberyard.tscn" id="13_ycdy4"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7mycd")
 
-[node name="Map" parent="." instance=ExtResource("2_kek77")]
-
-[node name="floor" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(752, 335)
-scale = Vector2(3.18902, 1.81141)
-texture = ExtResource("1_0xm2m")
-
-[node name="Lamber" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("3_h2yge")]
-position = Vector2(257, 144)
-work_place = NodePath("../Storage")
-
-[node name="Tree" parent="." instance=ExtResource("3_1bvp3")]
-position = Vector2(490, 213)
-
-[node name="Tree2" parent="." instance=ExtResource("3_1bvp3")]
-position = Vector2(1033, 331)
-
-[node name="Tree3" parent="." instance=ExtResource("3_1bvp3")]
-position = Vector2(848, 486)
-
-[node name="Storage" parent="." groups=["storage_wood"] instance=ExtResource("4_1bvp3")]
-position = Vector2(221, 446)
-type = "Wood"
-
 [node name="Hud" parent="." instance=ExtResource("5_lquwl")]
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(857, 72)
-
-[node name="Forester_place" parent="." instance=ExtResource("7_272bh")]
-position = Vector2(904, 144)
-
-[node name="Forester" parent="." node_paths=PackedStringArray("work_place") instance=ExtResource("8_5vw27")]
-position = Vector2(801, 202)
-work_place = NodePath("../Forester_place")
-
-[node name="RockMine" parent="." instance=ExtResource("10_4c57u")]
-position = Vector2(287, 579)
-
-[node name="MinerWorkPlace" parent="." instance=ExtResource("11_efxa6")]
-position = Vector2(612, 533)
-
-[node name="MainStorage" parent="." instance=ExtResource("12_dg77c")]
-position = Vector2(635, 311)
-
-[node name="Lumberyard" parent="." instance=ExtResource("13_ycdy4")]
-position = Vector2(106, 156)
+[node name="WithState" parent="." instance=ExtResource("3_h2yge")]
