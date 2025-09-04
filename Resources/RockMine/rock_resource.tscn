@@ -10,8 +10,8 @@ size = Vector2(72, 93)
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_8tusr")
-total = 15
-left = 15
+total = 100
+left = 100
 amountIndicator = NodePath("Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
