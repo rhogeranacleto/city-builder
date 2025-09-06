@@ -3,6 +3,8 @@ class_name Character
 
 @export var inventory : Inventory
 
+@onready var action: Label = $Action
+
 var SPEED:= 200.0
 
 @export var workplace : Workplace :

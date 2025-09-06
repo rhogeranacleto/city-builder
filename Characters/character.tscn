@@ -20,3 +20,10 @@ texture = ExtResource("1_acr0g")
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("3_3mn46")
 character = NodePath("..")
+
+[node name="Action" type="Label" parent="."]
+offset_left = -115.0
+offset_top = -58.0
+offset_right = 116.0
+offset_bottom = -35.0
+horizontal_alignment = 1

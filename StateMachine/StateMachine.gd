@@ -27,6 +27,8 @@ func change_state(new_state: String):
 		current_state.process_mode = ProcessMode.PROCESS_MODE_DISABLED
 
 	current_state = states[new_state]
+	
+	character.action.text = new_state
 
 	current_state.enter()
 	current_state.process_mode = ProcessMode.PROCESS_MODE_INHERIT
