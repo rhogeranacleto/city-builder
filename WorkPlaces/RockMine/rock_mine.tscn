@@ -15,7 +15,7 @@ initial = "RockMiner_idle"
 states_scripts = Array[Script]([ExtResource("3_8lc3g"), ExtResource("4_aisa8"), ExtResource("5_aisa8"), ExtResource("6_kcy3q")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_2a0l5"]
+[sub_resource type="Resource" id="Resource_aisa8"]
 script = ExtResource("2_s6f57")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
@@ -25,8 +25,9 @@ radius = 100.0
 [node name="RockMine" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
 script = ExtResource("1_agmt7")
 job_resource = SubResource("Resource_kcy3q")
-inventory = SubResource("Resource_2a0l5")
+inventory = SubResource("Resource_aisa8")
 amountIndicator = NodePath("AmountIndicator")
+items = Array[String](["rock"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3onty")

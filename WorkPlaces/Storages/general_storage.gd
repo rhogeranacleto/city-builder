@@ -1,11 +1,13 @@
-extends Node2D
+extends Workplace
+class_name MainStorage
 
-@export var inventory : Inventory = preload("res://inventory.tres")
+var workplaces : Array[Workplace] = []
 
-func addResource(type: String, amount: int) -> void:
-	inventory[type] += amount
+func add_workplace(workplace: Workplace):
+	if workplace not in workplaces:
+		workplaces.append(workplace)
 	pass
 
-func removeResource(type: String, amount: int) -> void:
-	inventory[type] -= amount
+func remove_workplace(workplace: Workplace):
+	workplaces.erase(workplace)
 	pass

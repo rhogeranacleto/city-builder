@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://oq1xyp7tj231"]
+[gd_scene load_steps=9 format=3 uid="uid://oq1xyp7tj231"]
 
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="1_b4k12"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="2_xspqo"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdnsymljxy6e3" path="res://WorkPlaces/Lumberyard/lumberyard.tscn" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="7_2njeq"]
 [ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://WorkPlaces/Forester/forester.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/general_storage.tscn" id="8_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://g7y8hskum4oh" path="res://Resources/RockMine/rock_resource.tscn" id="8_o4bej"]
 
 [node name="Game" type="Node2D"]
@@ -44,3 +45,6 @@ position = Vector2(848, 154)
 [node name="Character3" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
 position = Vector2(995, 228)
 workplace = NodePath("../Forester")
+
+[node name="MainStorage" parent="." instance=ExtResource("8_j5wjh")]
+position = Vector2(500, 252)

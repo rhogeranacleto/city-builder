@@ -15,15 +15,16 @@ initial = "Lumberjack_idle"
 states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku"), ExtResource("5_qfx2n"), ExtResource("6_s273p")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_k3r2i"]
+[sub_resource type="Resource" id="Resource_s273p"]
 script = ExtResource("2_8v6u2")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
 script = ExtResource("1_fvtr3")
 job_resource = SubResource("Resource_w6xku")
-inventory = SubResource("Resource_k3r2i")
+inventory = SubResource("Resource_s273p")
 amountIndicator = NodePath("AmountIndicator")
+items = Array[String](["wood"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_eo0lj")

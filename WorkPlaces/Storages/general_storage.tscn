@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bros6cdq54aw6"]
+[gd_scene load_steps=6 format=3 uid="uid://bros6cdq54aw6"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_f6mn6"]
 [ext_resource type="Script" uid="uid://dv3efvxrxuton" path="res://WorkPlaces/Storages/general_storage.gd" id="1_m55u1"]
+[ext_resource type="Resource" uid="uid://fgld7axp0kag" path="res://main_inventory.tres" id="2_5xxt6"]
+[ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_8fqrt"]
 
-[node name="MainStorage" type="Node2D"]
+[sub_resource type="Resource" id="Resource_b2p80"]
+script = ExtResource("2_8fqrt")
+metadata/_custom_type_script = "uid://du86b8d7hjr33"
+
+[node name="MainStorage" type="Node2D" groups=["general_store"]]
 script = ExtResource("1_m55u1")
+job_resource = SubResource("Resource_b2p80")
+inventory = ExtResource("2_5xxt6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_f6mn6")

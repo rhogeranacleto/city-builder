@@ -1,6 +1,6 @@
 extends BoxContainer
 
-@export var inventory : Inventory = preload("res://inventory.tres")
+@export var inventory : Inventory = preload("res://main_inventory.tres")
 @export var label := '';
 @export var type : String
 
