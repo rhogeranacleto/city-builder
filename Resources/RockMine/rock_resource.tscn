@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://g7y8hskum4oh"]
+[gd_scene load_steps=6 format=3 uid="uid://g7y8hskum4oh"]
 
 [ext_resource type="Script" uid="uid://d0wh2stxj1n58" path="res://Resources/types/ExhaustibleResource.gd" id="1_8tusr"]
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_iqfyx"]
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_sr5h6"]
+
+[sub_resource type="Resource" id="Resource_775id"]
+script = ExtResource("2_sr5h6")
+rock = 100
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ooqcx"]
 size = Vector2(72, 93)
@@ -10,9 +16,8 @@ size = Vector2(72, 93)
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_8tusr")
-total = 100
-left = 100
 amountIndicator = NodePath("Label")
+inventory = SubResource("Resource_775id")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iqfyx")
@@ -28,5 +33,5 @@ offset_left = -64.0
 offset_top = -78.0
 offset_right = 63.0
 offset_bottom = -55.0
-text = "100 / 100"
+text = "100"
 horizontal_alignment = 1

@@ -1,18 +1,17 @@
 extends Node2D
 class_name ExhaustibleResource
 
-@export var total := 0
-@export var left := 0
 @export var amountIndicator : Label
+@export var inventory : Inventory
 
 func extract(amount: int) -> int:
-	var extract_amount = min(amount, left);
+	var extract_amount = min(amount, inventory.rock);
 	
-	left -= extract_amount
+	inventory.addItem('rock', -extract_amount) 
 	
-	if left <= 0:
+	if inventory.rock <= 0:
 		queue_free()
 	else:
-		amountIndicator.text = str(left) + ' / ' + str(total)
+		amountIndicator.text = str(inventory.rock)
 	
 	return extract_amount
