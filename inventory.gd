@@ -3,6 +3,9 @@ class_name Inventory
 
 @export var wood := 0
 @export var rock := 0
+@export var total : int:
+	get():
+		return wood + rock
 
 signal changed_any
 signal wood_changed(int)
