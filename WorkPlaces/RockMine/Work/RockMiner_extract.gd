@@ -11,7 +11,7 @@ func enter():
 	else:
 		await get_tree().create_timer(2.0).timeout
 		
-		var extracted = resource.extract(5)
+		var extracted = resource.extract(1)
 		
 		character.inventory.addItem('rock', extracted)
 		
