@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://0t81bvhdfxh8"]
+
+[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_4ybcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ybcb"]
+size = Vector2(20, 28)
+
+[node name="BerryBush" type="Area2D" groups=["berry_bush"]]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4ybcb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4ybcb")
+region_enabled = true
+region_rect = Rect2(967.78534, 455.24332, 20.892395, 28.291779)

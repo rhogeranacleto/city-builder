@@ -11,7 +11,7 @@ func enter():
 	
 	item_to_get = target.items.get(item_to_get_index)
 	
-	amount = min(target.inventory[item_to_get], 1)
+	amount = min(target.inventory[item_to_get], 3)
 	
 	target.inventory.addItem(item_to_get, -amount)
 	character.inventory.addItem(item_to_get, amount)

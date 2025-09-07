@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://oq1xyp7tj231"]
+[gd_scene load_steps=11 format=3 uid="uid://oq1xyp7tj231"]
 
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="1_b4k12"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="2_xspqo"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://chomr6xdlkvph" path="res://WorkPlaces/Forester/forester.tscn" id="7_vef74"]
 [ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="8_hve3p"]
 [ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/general_storage.tscn" id="8_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://cg2hijvfa27q3" path="res://WorkPlaces/Foragers/berry_picker.tscn" id="9_vef74"]
+[ext_resource type="PackedScene" uid="uid://0t81bvhdfxh8" path="res://Resources/Renewable/berry_bush.tscn" id="10_hve3p"]
 
 [node name="Game" type="Node2D"]
 
@@ -52,3 +54,22 @@ workplace = NodePath("../Forester")
 [node name="Character4" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
 position = Vector2(828, 374)
 workplace = NodePath("../RockMine")
+
+[node name="BerryPicker" parent="." instance=ExtResource("9_vef74")]
+position = Vector2(159, 380)
+
+[node name="BerryBush" parent="." instance=ExtResource("10_hve3p")]
+position = Vector2(104, 427)
+
+[node name="BerryBush2" parent="." instance=ExtResource("10_hve3p")]
+position = Vector2(101, 331)
+
+[node name="BerryBush3" parent="." instance=ExtResource("10_hve3p")]
+position = Vector2(198, 446)
+
+[node name="BerryBush4" parent="." instance=ExtResource("10_hve3p")]
+position = Vector2(243, 281)
+
+[node name="Character5" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
+position = Vector2(71, 364)
+workplace = NodePath("../BerryPicker")

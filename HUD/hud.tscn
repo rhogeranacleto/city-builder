@@ -20,3 +20,8 @@ layout_mode = 2
 size_flags_horizontal = 8
 label = "Rock"
 type = "rock"
+
+[node name="Berry" parent="ResourcesInfo" instance=ExtResource("1_37p78")]
+layout_mode = 2
+label = "Berry"
+type = "berry"

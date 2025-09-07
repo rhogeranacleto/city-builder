@@ -35,6 +35,7 @@ tap={
 [layer_names]
 
 2d_physics/layer_1="rock_resources"
+2d_physics/layer_2="berry"
 
 [rendering]
 
