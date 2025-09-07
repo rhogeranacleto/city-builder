@@ -30,7 +30,7 @@ func _ready() -> void:
 func register_to_workplace():
 	if workplace.register_worker(self):
 		state_machine.updateCollection(workplace.job_resource.states_scripts)
-		state_machine.start(workplace.job_resource.initial)
+		state_machine.start(workplace.job_resource.states_scripts.get(0).get_global_name())
 
 func walk_to(target: Vector2, delta: float) -> float:
 	global_position += position.direction_to(target) * SPEED * delta

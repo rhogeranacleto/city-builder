@@ -10,8 +10,7 @@
 
 [sub_resource type="Resource" id="Resource_wltl0"]
 script = ExtResource("2_4di0b")
-initial = "Forester_idle"
-states_scripts = Array[Script]([ExtResource("3_vp2f8"), ExtResource("4_vp2f8"), ExtResource("5_r33l3"), ExtResource("6_0vpp3")])
+states_scripts = Array[Script]([ExtResource("3_vp2f8"), ExtResource("5_r33l3"), ExtResource("4_vp2f8"), ExtResource("6_0vpp3")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
 [node name="Forester" type="Node2D"]

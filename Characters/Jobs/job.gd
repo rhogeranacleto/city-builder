@@ -1,7 +1,7 @@
 extends Resource
 class_name Job
 
-@export var initial : String
+#@export var initial : String
 @export var states_scripts : Array[Script]
 
 #func assign_to(state_machine: StateMachine):	

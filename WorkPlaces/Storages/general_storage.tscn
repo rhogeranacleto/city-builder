@@ -10,7 +10,6 @@
 
 [sub_resource type="Resource" id="Resource_y8xua"]
 script = ExtResource("2_b2p80")
-initial = "Stocker_idle"
 states_scripts = Array[Script]([ExtResource("3_mkv46"), ExtResource("4_mkv46"), ExtResource("5_y8xua")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 

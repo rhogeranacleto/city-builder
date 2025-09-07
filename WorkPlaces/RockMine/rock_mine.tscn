@@ -12,7 +12,7 @@
 [sub_resource type="Resource" id="Resource_kcy3q"]
 script = ExtResource("2_ygai5")
 initial = "RockMiner_idle"
-states_scripts = Array[Script]([ExtResource("3_8lc3g"), ExtResource("4_aisa8"), ExtResource("5_aisa8"), ExtResource("6_kcy3q")])
+states_scripts = Array[Script]([ExtResource("4_aisa8"), ExtResource("3_8lc3g"), ExtResource("5_aisa8"), ExtResource("6_kcy3q")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
 [sub_resource type="Resource" id="Resource_aisa8"]
