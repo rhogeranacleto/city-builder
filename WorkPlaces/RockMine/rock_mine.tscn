@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://nboxo44ig36v"]
+[gd_scene load_steps=15 format=3 uid="uid://nboxo44ig36v"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_3onty"]
 [ext_resource type="Script" uid="uid://bg80qlne54rbl" path="res://WorkPlaces/RockMine/rock_mine.gd" id="1_agmt7"]
@@ -8,15 +8,23 @@
 [ext_resource type="Script" uid="uid://oamay0uvulel" path="res://WorkPlaces/RockMine/Work/RockMiner_idle.gd" id="4_aisa8"]
 [ext_resource type="Script" uid="uid://but272ngr8k8v" path="res://WorkPlaces/RockMine/Work/RockMiner_extract.gd" id="5_aisa8"]
 [ext_resource type="Script" uid="uid://fldhprl553ao" path="res://WorkPlaces/RockMine/Work/RockMiner_deliver.gd" id="6_kcy3q"]
+[ext_resource type="Script" uid="uid://dq77oi5jhdqqe" path="res://inventory_item.gd" id="7_s0kgq"]
+[ext_resource type="Script" uid="uid://bvj3ygplr8j0a" path="res://Buildings/building.gd" id="9_s0kgq"]
 
 [sub_resource type="Resource" id="Resource_kcy3q"]
 script = ExtResource("2_ygai5")
-initial = "RockMiner_idle"
 states_scripts = Array[Script]([ExtResource("4_aisa8"), ExtResource("3_8lc3g"), ExtResource("5_aisa8"), ExtResource("6_kcy3q")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
+[sub_resource type="Resource" id="Resource_s0kgq"]
+script = ExtResource("7_s0kgq")
+metadata/_custom_type_script = "uid://dq77oi5jhdqqe"
+
 [sub_resource type="Resource" id="Resource_aisa8"]
 script = ExtResource("2_s6f57")
+items = Dictionary[int, ExtResource("7_s0kgq")]({
+1: SubResource("Resource_s0kgq")
+})
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ygai5"]
@@ -33,6 +41,7 @@ items = Array[String](["rock"])
 texture = ExtResource("1_3onty")
 region_enabled = true
 region_rect = Rect2(815.202, 223.704, 46.1093, 58.5358)
+script = ExtResource("9_s0kgq")
 
 [node name="AmountIndicator" type="Label" parent="."]
 offset_left = -18.0

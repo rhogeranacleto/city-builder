@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdnsymljxy6e3"]
+[gd_scene load_steps=13 format=3 uid="uid://cdnsymljxy6e3"]
 
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_eo0lj"]
 [ext_resource type="Script" uid="uid://cvq44rjdxed0d" path="res://WorkPlaces/Lumberyard/lumberyard.gd" id="1_fvtr3"]
@@ -8,15 +8,22 @@
 [ext_resource type="Script" uid="uid://sk87ruva0pye" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_look_for_tree.gd" id="4_w6xku"]
 [ext_resource type="Script" uid="uid://doxrtjg0booy8" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_chop.gd" id="5_qfx2n"]
 [ext_resource type="Script" uid="uid://bc3pgyy3rnej0" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_deliver.gd" id="6_s273p"]
+[ext_resource type="Script" uid="uid://dq77oi5jhdqqe" path="res://inventory_item.gd" id="7_k3r2i"]
 
 [sub_resource type="Resource" id="Resource_w6xku"]
 script = ExtResource("2_gtdb1")
-initial = "Lumberjack_idle"
 states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku"), ExtResource("5_qfx2n"), ExtResource("6_s273p")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
+[sub_resource type="Resource" id="Resource_k3r2i"]
+script = ExtResource("7_k3r2i")
+metadata/_custom_type_script = "uid://dq77oi5jhdqqe"
+
 [sub_resource type="Resource" id="Resource_s273p"]
 script = ExtResource("2_8v6u2")
+items = Dictionary[int, ExtResource("7_k3r2i")]({
+0: SubResource("Resource_k3r2i")
+})
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
