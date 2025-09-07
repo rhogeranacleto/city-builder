@@ -9,6 +9,7 @@ extends BoxContainer
 
 func _ready() -> void:
 	nameLabel.text = str(label)
+	update_value(inventory[type])
 	
 	inventory.connect(type + "_changed", update_value)
 

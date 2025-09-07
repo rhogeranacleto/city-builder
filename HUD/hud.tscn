@@ -4,17 +4,19 @@
 
 [node name="Hud" type="CanvasLayer"]
 
-[node name="Wood" parent="." instance=ExtResource("1_37p78")]
-anchors_preset = 1
-anchor_left = 1.0
+[node name="ResourcesInfo" type="HBoxContainer" parent="."]
+anchors_preset = 10
 anchor_right = 1.0
-offset_left = -61.0
-offset_right = 0.0
-grow_horizontal = 0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Wood" parent="ResourcesInfo" instance=ExtResource("1_37p78")]
+layout_mode = 2
 label = "Wood"
 type = "wood"
 
-[node name="Rock" parent="." instance=ExtResource("1_37p78")]
+[node name="Rock" parent="ResourcesInfo" instance=ExtResource("1_37p78")]
+layout_mode = 2
 size_flags_horizontal = 8
 label = "Rock"
 type = "rock"
