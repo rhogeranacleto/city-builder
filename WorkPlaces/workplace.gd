@@ -12,7 +12,7 @@ var is_checked_to_a_inventory := false
 
 func _ready() -> void:
 	if not is_in_group('general_store') and inventory:
-		inventory.changed_any.connect(inventory_changed)
+		inventory.changed.connect(inventory_changed)
 	
 	pass
 
