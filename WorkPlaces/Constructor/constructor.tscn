@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://cqoi0gjt1ckbm" path="res://WorkPlaces/workplace.gd" id="1_5r7q5"]
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_rx0vy"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_lu30b"]
-[ext_resource type="Script" uid="uid://dq77oi5jhdqqe" path="res://inventory_item.gd" id="3_hu4at"]
+[ext_resource type="Script" uid="uid://cc8bdh1r58ypr" path="res://WorkPlaces/Constructor/Work/Builder_idle.gd" id="3_hu4at"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="4_nvkpv"]
 
 [sub_resource type="Resource" id="Resource_544am"]
 script = ExtResource("2_lu30b")
+states_scripts = Array[Script]([ExtResource("3_hu4at")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
 [sub_resource type="Resource" id="Resource_v1ajg"]

@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwj6lp2s40qh1"]
+[gd_scene load_steps=5 format=3 uid="uid://bwj6lp2s40qh1"]
 
 [ext_resource type="Script" uid="uid://bvj3ygplr8j0a" path="res://Buildings/building.gd" id="1_gtvch"]
+[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_hr4wu"]
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_282m8"]
+
+[sub_resource type="Resource" id="Resource_hr4wu"]
+script = ExtResource("2_282m8")
+wood = 3
+rock = 2
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Building" type="Sprite2D"]
+texture = ExtResource("1_hr4wu")
+region_enabled = true
+region_rect = Rect2(0, 100.37, 118.72, 98.035)
 script = ExtResource("1_gtvch")
+needs = SubResource("Resource_hr4wu")

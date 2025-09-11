@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://oq1xyp7tj231"]
+[gd_scene load_steps=12 format=3 uid="uid://oq1xyp7tj231"]
 
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="1_b4k12"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="2_xspqo"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/general_storage.tscn" id="8_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://cg2hijvfa27q3" path="res://WorkPlaces/Foragers/berry_picker.tscn" id="9_vef74"]
 [ext_resource type="PackedScene" uid="uid://0t81bvhdfxh8" path="res://Resources/Renewable/berry_bush.tscn" id="10_hve3p"]
+[ext_resource type="PackedScene" uid="uid://bbk3p10ghmprj" path="res://WorkPlaces/Constructor/constructor.tscn" id="11_mfdv2"]
 
 [node name="Game" type="Node2D"]
 
@@ -73,3 +74,10 @@ position = Vector2(243, 281)
 [node name="Character5" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
 position = Vector2(71, 364)
 workplace = NodePath("../BerryPicker")
+
+[node name="Constructor" parent="." instance=ExtResource("11_mfdv2")]
+position = Vector2(400, 291)
+
+[node name="Character6" parent="." node_paths=PackedStringArray("workplace") instance=ExtResource("2_xspqo")]
+position = Vector2(444, 288)
+workplace = NodePath("../Constructor")
