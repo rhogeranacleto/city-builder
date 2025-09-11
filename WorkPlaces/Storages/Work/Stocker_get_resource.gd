@@ -13,8 +13,8 @@ func enter():
 	
 	amount = min(target.inventory[item_to_get], 3)
 	
-	target.inventory.addItem(item_to_get, -amount)
-	character.inventory.addItem(item_to_get, amount)
+	target.inventory[item_to_get] -= amount
+	character.inventory[item_to_get] += amount
 	
 	pass
 
@@ -23,5 +23,5 @@ func _process(delta: float) -> void:
 		state_machine.change_state('Stocker_idle')
 
 func exit():
-	character.inventory.addItem(item_to_get, -amount)
-	character.workplace.inventory.addItem(item_to_get, amount)
+	character.inventory[item_to_get] -= amount
+	character.workplace.inventory[item_to_get] += amount

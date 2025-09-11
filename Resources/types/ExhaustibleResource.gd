@@ -7,7 +7,7 @@ class_name ExhaustibleResource
 func extract(amount: int) -> int:
 	var extract_amount = min(amount, inventory.rock);
 	
-	inventory.addItem('rock', -extract_amount) 
+	inventory.rock -= extract_amount
 	
 	if inventory.rock <= 0:
 		queue_free()

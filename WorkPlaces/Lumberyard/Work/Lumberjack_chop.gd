@@ -13,7 +13,7 @@ func chop():
 		var finished = tree_target.chop()
 		
 		if finished:
-			character.inventory.addItem('wood', 1)
+			character.inventory.wood += 1
 			state_machine.change_state('Lumberjack_deliver')
 			state_machine.context.erase('target_tree')
 		else:

@@ -13,6 +13,6 @@ func enter():
 		
 		var extracted = resource.extract(1)
 		
-		character.inventory.addItem('rock', extracted)
+		character.inventory.rock += extracted
 		
 		state_machine.change_state('RockMiner_deliver')
