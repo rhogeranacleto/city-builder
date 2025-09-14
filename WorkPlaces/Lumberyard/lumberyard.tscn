@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cdnsymljxy6e3"]
 
-[ext_resource type="Script" uid="uid://cvq44rjdxed0d" path="res://WorkPlaces/lumberyard.gd" id="1_fvtr3"]
+[ext_resource type="Script" uid="uid://cqoi0gjt1ckbm" path="res://WorkPlaces/workplace.gd" id="1_pnau1"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_8v6u2"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_gtdb1"]
 [ext_resource type="Script" uid="uid://cexh7bvvfmgak" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_idle.gd" id="4_qfx2n"]
@@ -9,27 +9,27 @@
 [ext_resource type="Script" uid="uid://bc3pgyy3rnej0" path="res://WorkPlaces/Lumberyard/Work/Lumberjack_deliver.gd" id="6_s273p"]
 [ext_resource type="Texture2D" uid="uid://dfghrtiose26v" path="res://WorkPlaces/Lumberyard/lumberyeard_sprite.tres" id="8_s273p"]
 
-[sub_resource type="Resource" id="Resource_w6xku"]
+[sub_resource type="Resource" id="Resource_gtdb1"]
 script = ExtResource("2_gtdb1")
-states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku"), ExtResource("5_qfx2n"), ExtResource("6_s273p")])
+states_scripts = Array[Script]([ExtResource("4_qfx2n"), ExtResource("4_w6xku"), ExtResource("6_s273p"), ExtResource("5_qfx2n")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_s273p"]
+[sub_resource type="Resource" id="Resource_fvtr3"]
 script = ExtResource("2_8v6u2")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
-[sub_resource type="Resource" id="Resource_k3r2i"]
+[sub_resource type="Resource" id="Resource_8v6u2"]
 script = ExtResource("2_8v6u2")
-wood = 5
+wood = -2
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Lumberyard" type="Node2D" node_paths=PackedStringArray("amountIndicator")]
-script = ExtResource("1_fvtr3")
-job_resource = SubResource("Resource_w6xku")
-inventory = SubResource("Resource_s273p")
+script = ExtResource("1_pnau1")
+job_resource = SubResource("Resource_gtdb1")
+inventory = SubResource("Resource_fvtr3")
 amountIndicator = NodePath("AmountIndicator")
 items = Array[String](["wood"])
-needs = SubResource("Resource_k3r2i")
+needs = SubResource("Resource_8v6u2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("8_s273p")

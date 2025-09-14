@@ -1,2 +1,0 @@
-extends Workplace
-class_name Lumberyard

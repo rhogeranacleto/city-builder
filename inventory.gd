@@ -7,23 +7,32 @@ enum INVENTORY_ITEM_TYPE {
 	berry
 }
 
+signal wood_changed(int)
+
 @export var wood := 0:
 	set(value): 
 		wood = value
 		wood_changed.emit(value);
 		emit_changed()
+
+signal rock_changed(int)
+
 @export var rock := 0:
 	set(value): 
 		rock = value
 		rock_changed.emit(value)
 		emit_changed()
+
+signal berry_changed(int)
+
 @export var berry := 0:
 	set(value): 
 		berry = value
 		berry_changed.emit(value)
 		emit_changed()
 
-@export var total : int :
+
+var total : int :
 	get():
 		var sum = 0
 		
@@ -33,6 +42,11 @@ enum INVENTORY_ITEM_TYPE {
 		
 		return sum
 
-signal wood_changed(int)
-signal rock_changed(int)
-signal berry_changed(int)
+var negative : Array[String] :
+	get():
+		var negative_keys : Array[String] = []
+		for key in Inventory.INVENTORY_ITEM_TYPE.keys():
+			if self[key] < 0:
+				negative_keys.append(key)
+		
+		return negative_keys

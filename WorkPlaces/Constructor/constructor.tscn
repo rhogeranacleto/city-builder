@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbk3p10ghmprj"]
+[gd_scene load_steps=9 format=3 uid="uid://bbk3p10ghmprj"]
 
 [ext_resource type="Script" uid="uid://cqoi0gjt1ckbm" path="res://WorkPlaces/workplace.gd" id="1_5r7q5"]
 [ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_rx0vy"]
@@ -15,10 +15,15 @@ metadata/_custom_type_script = "uid://du86b8d7hjr33"
 script = ExtResource("4_nvkpv")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
+[sub_resource type="Resource" id="Resource_hu4at"]
+script = ExtResource("4_nvkpv")
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
+
 [node name="Constructor" type="Node2D"]
 script = ExtResource("1_5r7q5")
 job_resource = SubResource("Resource_544am")
 inventory = SubResource("Resource_v1ajg")
+needs = SubResource("Resource_hu4at")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rx0vy")

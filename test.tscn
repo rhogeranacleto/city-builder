@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b42mscryvkngb"]
+[gd_scene load_steps=6 format=3 uid="uid://b42mscryvkngb"]
 
 [ext_resource type="Script" uid="uid://b0fpgeghin22p" path="res://test.gd" id="1_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="2_8uh7m"]
-[ext_resource type="PackedScene" uid="uid://bwj6lp2s40qh1" path="res://Buildings/building.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://bbk3p10ghmprj" path="res://WorkPlaces/Constructor/constructor.tscn" id="4_ykrsh"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="5_g14j6"]
 [ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/warehouse.tscn" id="6_g14j6"]
@@ -11,9 +10,6 @@
 script = ExtResource("1_6uqi0")
 
 [node name="Map" parent="." instance=ExtResource("2_8uh7m")]
-
-[node name="Building" parent="." instance=ExtResource("3_6uqi0")]
-position = Vector2(428, 278)
 
 [node name="Constructor" parent="." instance=ExtResource("4_ykrsh")]
 position = Vector2(177, 183)

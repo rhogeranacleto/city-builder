@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg2hijvfa27q3"]
+[gd_scene load_steps=12 format=3 uid="uid://cg2hijvfa27q3"]
 
 [ext_resource type="Script" uid="uid://df1eoydgor4sr" path="res://WorkPlaces/Foragers/berry_picker.gd" id="1_lms8i"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_5i6s5"]
@@ -17,6 +17,11 @@ metadata/_custom_type_script = "uid://du86b8d7hjr33"
 script = ExtResource("2_5i6s5")
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
+[sub_resource type="Resource" id="Resource_10t0e"]
+script = ExtResource("2_5i6s5")
+wood = -2
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_qh8sb"]
 radius = 100.0
 
@@ -26,6 +31,7 @@ job_resource = SubResource("Resource_bpfr0")
 inventory = SubResource("Resource_5i6s5")
 amountIndicator = NodePath("Indicator")
 items = Array[String](["berry"])
+needs = SubResource("Resource_10t0e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("7_bpfr0")

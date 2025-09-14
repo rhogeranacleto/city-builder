@@ -14,6 +14,7 @@ func _ready() -> void:
 	if not is_in_group('general_store') and inventory:
 		inventory.changed.connect(inventory_changed)
 	
+	super._ready()
 	pass
 
 func register_worker(worker: Character) -> bool:
