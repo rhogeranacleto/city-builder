@@ -1,28 +1,20 @@
-[gd_scene load_steps=13 format=3 uid="uid://cg2hijvfa27q3"]
+[gd_scene load_steps=11 format=3 uid="uid://cg2hijvfa27q3"]
 
 [ext_resource type="Script" uid="uid://df1eoydgor4sr" path="res://WorkPlaces/Foragers/berry_picker.gd" id="1_lms8i"]
-[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_qh8sb"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_5i6s5"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_cv0p2"]
 [ext_resource type="Script" uid="uid://bmeedfrxjd2ee" path="res://WorkPlaces/Foragers/Work/BerryPicker_idle.gd" id="3_dqgwn"]
 [ext_resource type="Script" uid="uid://kwaen574m2sl" path="res://WorkPlaces/Foragers/Work/BerryPicker_deliver.gd" id="4_bpfr0"]
 [ext_resource type="Script" uid="uid://6cf1xxficari" path="res://WorkPlaces/Foragers/Work/BerryPicker_pick.gd" id="5_10t0e"]
-[ext_resource type="Script" uid="uid://dq77oi5jhdqqe" path="res://inventory_item.gd" id="6_10t0e"]
+[ext_resource type="Texture2D" uid="uid://bjs1t4kg804ql" path="res://WorkPlaces/Foragers/berry_picker_sprite.tres" id="7_bpfr0"]
 
 [sub_resource type="Resource" id="Resource_bpfr0"]
 script = ExtResource("2_cv0p2")
 states_scripts = Array[Script]([ExtResource("3_dqgwn"), ExtResource("4_bpfr0"), ExtResource("5_10t0e")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[sub_resource type="Resource" id="Resource_1b7wq"]
-script = ExtResource("6_10t0e")
-metadata/_custom_type_script = "uid://dq77oi5jhdqqe"
-
 [sub_resource type="Resource" id="Resource_5i6s5"]
 script = ExtResource("2_5i6s5")
-items = Dictionary[int, ExtResource("6_10t0e")]({
-2: SubResource("Resource_1b7wq")
-})
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qh8sb"]
@@ -36,9 +28,7 @@ amountIndicator = NodePath("Indicator")
 items = Array[String](["berry"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qh8sb")
-region_enabled = true
-region_rect = Rect2(905.425, 168.63397, 35.481262, 40.667618)
+texture = ExtResource("7_bpfr0")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

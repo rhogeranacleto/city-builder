@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dfghrtiose26v"]
+
+[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_pco42"]
+
+[resource]
+atlas = ExtResource("1_pco42")
+region = Rect2(462.14014, 0.46933556, 68.70386, 73.62991)

@@ -1,6 +1,5 @@
 [gd_scene load_steps=13 format=3 uid="uid://nboxo44ig36v"]
 
-[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_3onty"]
 [ext_resource type="Script" uid="uid://bg80qlne54rbl" path="res://WorkPlaces/RockMine/rock_mine.gd" id="1_agmt7"]
 [ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="2_s6f57"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_ygai5"]
@@ -8,6 +7,7 @@
 [ext_resource type="Script" uid="uid://oamay0uvulel" path="res://WorkPlaces/RockMine/Work/RockMiner_idle.gd" id="4_aisa8"]
 [ext_resource type="Script" uid="uid://but272ngr8k8v" path="res://WorkPlaces/RockMine/Work/RockMiner_extract.gd" id="5_aisa8"]
 [ext_resource type="Script" uid="uid://fldhprl553ao" path="res://WorkPlaces/RockMine/Work/RockMiner_deliver.gd" id="6_kcy3q"]
+[ext_resource type="Texture2D" uid="uid://djfd85undgtei" path="res://WorkPlaces/RockMine/rock_mine_sprite.tres" id="8_kcy3q"]
 [ext_resource type="Script" uid="uid://bvj3ygplr8j0a" path="res://Buildings/building.gd" id="9_s0kgq"]
 
 [sub_resource type="Resource" id="Resource_kcy3q"]
@@ -30,9 +30,7 @@ amountIndicator = NodePath("AmountIndicator")
 items = Array[String](["rock"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_3onty")
-region_enabled = true
-region_rect = Rect2(815.202, 223.704, 46.1093, 58.5358)
+texture = ExtResource("8_kcy3q")
 script = ExtResource("9_s0kgq")
 
 [node name="AmountIndicator" type="Label" parent="."]

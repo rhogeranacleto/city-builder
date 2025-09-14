@@ -1,4 +1,4 @@
-extends Node2D
+extends Building
 class_name Workplace
 
 @export var job_resource: Job

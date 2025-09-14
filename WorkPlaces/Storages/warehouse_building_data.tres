@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=5 format=3 uid="uid://c8bwwca44dqtq"]
+
+[ext_resource type="Script" uid="uid://wulcmrh372op" path="res://Buildings/BuildingData.gd" id="1_e02jw"]
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="1_xuhbc"]
+[ext_resource type="Texture2D" uid="uid://c6h5m1ar3t4j" path="res://WorkPlaces/Storages/warehouse_sprite.tres" id="3_mg7ra"]
+
+[sub_resource type="Resource" id="Resource_dfje5"]
+script = ExtResource("1_xuhbc")
+wood = 2
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
+
+[resource]
+script = ExtResource("1_e02jw")
+building_name = "Armazem"
+texture = ExtResource("3_mg7ra")
+needs = SubResource("Resource_dfje5")
+metadata/_custom_type_script = "uid://wulcmrh372op"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=5 format=3 uid="uid://dvdvhbepxlo3x"]
+
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="1_5xxop"]
+[ext_resource type="Script" uid="uid://wulcmrh372op" path="res://Buildings/BuildingData.gd" id="2_ou5u7"]
+[ext_resource type="Texture2D" uid="uid://bjs1t4kg804ql" path="res://WorkPlaces/Foragers/berry_picker_sprite.tres" id="3_1p75m"]
+
+[sub_resource type="Resource" id="Resource_r345p"]
+script = ExtResource("1_5xxop")
+wood = 2
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
+
+[resource]
+script = ExtResource("2_ou5u7")
+building_name = "Coletor de baga"
+texture = ExtResource("3_1p75m")
+needs = SubResource("Resource_r345p")
+metadata/_custom_type_script = "uid://wulcmrh372op"

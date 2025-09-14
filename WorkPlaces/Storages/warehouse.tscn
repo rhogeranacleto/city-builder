@@ -1,24 +1,23 @@
 [gd_scene load_steps=9 format=3 uid="uid://bros6cdq54aw6"]
 
-[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_f6mn6"]
-[ext_resource type="Script" uid="uid://dv3efvxrxuton" path="res://WorkPlaces/Storages/general_storage.gd" id="1_m55u1"]
+[ext_resource type="Script" uid="uid://dv3efvxrxuton" path="res://WorkPlaces/Storages/warehouse.gd" id="1_m55u1"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_b2p80"]
 [ext_resource type="Script" uid="uid://bwnufkpqj472b" path="res://WorkPlaces/Storages/Work/Stocker_idle.gd" id="3_mkv46"]
 [ext_resource type="Script" uid="uid://kcps1vcxotm4" path="res://WorkPlaces/Storages/Work/Stocker_go_to_workplace.gd" id="4_mkv46"]
 [ext_resource type="Resource" uid="uid://fgld7axp0kag" path="res://main_inventory.tres" id="5_mkv46"]
 [ext_resource type="Script" uid="uid://6kwbdaputdhq" path="res://WorkPlaces/Storages/Work/Stocker_get_resource.gd" id="5_y8xua"]
+[ext_resource type="Texture2D" uid="uid://c6h5m1ar3t4j" path="res://WorkPlaces/Storages/warehouse_sprite.tres" id="7_wnlll"]
 
 [sub_resource type="Resource" id="Resource_y8xua"]
 script = ExtResource("2_b2p80")
 states_scripts = Array[Script]([ExtResource("3_mkv46"), ExtResource("4_mkv46"), ExtResource("5_y8xua")])
 metadata/_custom_type_script = "uid://du86b8d7hjr33"
 
-[node name="MainStorage" type="Node2D" groups=["general_store"]]
+[node name="Warehouse" type="Node2D" groups=["general_store"]]
 script = ExtResource("1_m55u1")
 job_resource = SubResource("Resource_y8xua")
 inventory = ExtResource("5_mkv46")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_f6mn6")
-region_enabled = true
+texture = ExtResource("7_wnlll")
 region_rect = Rect2(459.705, 144.946, 71.8512, 92.1799)

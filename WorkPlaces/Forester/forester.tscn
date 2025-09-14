@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://chomr6xdlkvph"]
 
 [ext_resource type="Script" uid="uid://cqoi0gjt1ckbm" path="res://WorkPlaces/workplace.gd" id="1_j5ha5"]
-[ext_resource type="Texture2D" uid="uid://dl6ic1cadujcm" path="res://Map/hexagonObjects_sheet.png" id="1_mdh7f"]
 [ext_resource type="Script" uid="uid://du86b8d7hjr33" path="res://Characters/Jobs/job.gd" id="2_4di0b"]
 [ext_resource type="Script" uid="uid://cdpclhl0dvjyh" path="res://WorkPlaces/Forester/Work/Forester_idle.gd" id="3_vp2f8"]
 [ext_resource type="Script" uid="uid://jma4abi7n2hd" path="res://WorkPlaces/Forester/Work/Forester_go_to_position.gd" id="4_vp2f8"]
 [ext_resource type="Script" uid="uid://b14txq71gvjo" path="res://WorkPlaces/Forester/Work/Forester_back_to_workplace.gd" id="5_r33l3"]
 [ext_resource type="Script" uid="uid://dhrlx5sx2s307" path="res://WorkPlaces/Forester/Work/Forester_plant.gd" id="6_0vpp3"]
+[ext_resource type="Texture2D" uid="uid://btf7yntl3jjxe" path="res://WorkPlaces/Forester/forester_sprite.tres" id="7_r33l3"]
 
 [sub_resource type="Resource" id="Resource_wltl0"]
 script = ExtResource("2_4di0b")
@@ -18,9 +18,7 @@ script = ExtResource("1_j5ha5")
 job_resource = SubResource("Resource_wltl0")
 
 [node name="Forester" type="Sprite2D" parent="."]
-texture = ExtResource("1_mdh7f")
-region_enabled = true
-region_rect = Rect2(461.3991, 76.451355, 61.422974, 66.614044)
+texture = ExtResource("7_r33l3")
 
 [node name="Name" type="Label" parent="."]
 offset_left = -70.0

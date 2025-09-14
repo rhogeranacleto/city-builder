@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=3 format=3 uid="uid://qb4gkd8e178f"]
+
+[ext_resource type="Script" uid="uid://wulcmrh372op" path="res://Buildings/BuildingData.gd" id="1_cls0m"]
+[ext_resource type="Texture2D" uid="uid://djfd85undgtei" path="res://WorkPlaces/RockMine/rock_mine_sprite.tres" id="2_4mbj0"]
+
+[resource]
+script = ExtResource("1_cls0m")
+building_name = "Mina de pedra"
+texture = ExtResource("2_4mbj0")
+metadata/_custom_type_script = "uid://wulcmrh372op"
