@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b42mscryvkngb"]
+[gd_scene load_steps=9 format=3 uid="uid://b42mscryvkngb"]
 
 [ext_resource type="Script" uid="uid://b0fpgeghin22p" path="res://test.gd" id="1_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://dstm2qic2a5tc" path="res://Map/map.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://bbk3p10ghmprj" path="res://WorkPlaces/Constructor/constructor.tscn" id="4_ykrsh"]
 [ext_resource type="PackedScene" uid="uid://2x6hbu1eroa8" path="res://Characters/character.tscn" id="5_g14j6"]
 [ext_resource type="PackedScene" uid="uid://bros6cdq54aw6" path="res://WorkPlaces/Storages/warehouse.tscn" id="6_g14j6"]
+[ext_resource type="Script" uid="uid://cnp4gbibgvta0" path="res://inventory.gd" id="6_vbegm"]
+[ext_resource type="PackedScene" uid="uid://nboxo44ig36v" path="res://WorkPlaces/RockMine/rock_mine.tscn" id="7_vbegm"]
+
+[sub_resource type="Resource" id="Resource_ehkex"]
+script = ExtResource("6_vbegm")
+metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_6uqi0")
@@ -20,3 +26,8 @@ workplace = NodePath("../Constructor")
 
 [node name="MainStorage" parent="." instance=ExtResource("6_g14j6")]
 position = Vector2(446, 415)
+needs = SubResource("Resource_ehkex")
+construction_state = 1
+
+[node name="RockMine" parent="." instance=ExtResource("7_vbegm")]
+position = Vector2(775, 210)

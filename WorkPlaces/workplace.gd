@@ -7,7 +7,7 @@ class_name Workplace
 @export var limit := 100 # move it to another place, the workspace doesnt need to know the limit of the inventary
 @export var items : Array[String]
 
-var workers: Array = []
+var workers: Array[Character] = []
 var is_checked_to_a_inventory := false
 
 func _ready() -> void:

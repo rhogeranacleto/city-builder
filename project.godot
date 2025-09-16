@@ -22,7 +22,7 @@ version_control/autoload_on_startup=true
 
 [global_group]
 
-general_store=""
+warehouse=""
 
 [input]
 
