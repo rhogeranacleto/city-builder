@@ -1,5 +1,5 @@
 extends Workplace
-class_name MainStorage
+class_name Warehouse
 
 var workplaces : Array[Workplace] = []
 

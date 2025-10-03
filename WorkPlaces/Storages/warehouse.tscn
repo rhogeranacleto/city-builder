@@ -19,7 +19,7 @@ script = ExtResource("7_xsg1y")
 wood = -2
 metadata/_custom_type_script = "uid://cnp4gbibgvta0"
 
-[node name="Warehouse" type="Node2D" groups=["general_store"]]
+[node name="Warehouse" type="Node2D" groups=["warehouse"]]
 script = ExtResource("1_m55u1")
 job_resource = SubResource("Resource_y8xua")
 inventory = ExtResource("5_mkv46")

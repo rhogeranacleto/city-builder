@@ -42,11 +42,23 @@ var total : int :
 		
 		return sum
 
-var negative : Array[String] :
-	get():
-		var negative_keys : Array[String] = []
-		for key in Inventory.INVENTORY_ITEM_TYPE.keys():
-			if self[key] < 0:
-				negative_keys.append(key)
-		
-		return negative_keys
+func negative_items() -> Array[String] :
+	var negative_keys : Array[String] = []
+
+	for key in INVENTORY_ITEM_TYPE.keys():
+		if self[key] < 0:
+			negative_keys.append(key)
+	
+	return negative_keys
+
+func transfer_to(inventory: Inventory, item: INVENTORY_ITEM_TYPE, amount: int):
+	var key = INVENTORY_ITEM_TYPE.find_key(item)
+	
+	var max_amount = min(amount, self[key]);
+	
+	self[key] -= max_amount
+	inventory[key] += max_amount
+	pass
+
+func find_available_items(items_list: Array[INVENTORY_ITEM_TYPE]) :
+	return items_list.filter(func (item): return self[INVENTORY_ITEM_TYPE.find_key(item)] > 0)
